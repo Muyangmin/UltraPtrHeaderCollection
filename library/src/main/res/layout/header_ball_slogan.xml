@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:clipToPadding="false"
+        android:padding="5dp"
+        >
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/header_ptr_avLoadingIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:colorScheme1="@color/ptr_header_yellow"
+            app:colorScheme2="@color/ptr_header_green"
+            app:colorScheme3="@color/ptr_header_red"
+            app:colorScheme4="@color/ptr_header_blue"
+            app:customIndicator="org.mym.library.ballslogan.BallRectanglePathIndicator"
+            />
+
+        <org.mym.library.ballslogan.PtrPlaceHolder
+            android:id="@+id/header_ptr_place_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ptr_header_slogan"
+        android:scaleType="center"
+        />
+
+    <!--<TextView-->
+    <!--android:id="@+id/header_ptr_motto"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginBottom="3dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:textColor="@color/app_theme_color"-->
+    <!--android:textSize="12sp"-->
+
+    <!--tools:text="既会花钱,又会赚钱的人,是最幸福的人" />-->
+
+    <!-- 左右加翅膀效果，本来想做.9，但是似乎不太灵活。先这样吧-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:orientation="horizontal"-->
+    <!-->-->
+
+    <!--<View-->
+    <!--android:layout_width="21dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="#CCCCCC"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/header_ptr_author"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:textColor="@color/text_gray_light"-->
+    <!--android:textSize="10sp"-->
+    <!--tools:ignore="SmallSp"-->
+    <!--tools:text="塞 · 约翰生"/>-->
+
+    <!--<View-->
+    <!--android:layout_width="21dp"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:background="#CCCCCC"-->
+    <!--/>-->
+    <!--</LinearLayout>-->
+</LinearLayout>
