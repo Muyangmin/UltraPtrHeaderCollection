@@ -1,4 +1,4 @@
-package org.mym.library.ballslogan;
+package org.ptrheader.library.ballslogan;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.graphics.Paint;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
-import org.mym.library.R;
+import org.ptrheader.library.R;
 
 /**
  * 这个view主要是解决PTR在未执行刷新时隐藏刷新动画的问题。

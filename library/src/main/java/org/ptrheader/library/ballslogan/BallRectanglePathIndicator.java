@@ -1,4 +1,4 @@
-package org.mym.library.ballslogan;
+package org.ptrheader.library.ballslogan;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -12,7 +12,7 @@ import android.view.animation.LinearInterpolator;
 
 import com.wang.avi.indicator.BaseIndicatorController;
 
-import org.mym.library.R;
+import org.ptrheader.library.R;
 
 import java.util.ArrayList;
 import java.util.List;

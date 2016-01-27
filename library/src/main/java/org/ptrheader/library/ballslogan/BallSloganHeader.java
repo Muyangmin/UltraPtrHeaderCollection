@@ -1,4 +1,4 @@
-package org.mym.library.ballslogan;
+package org.ptrheader.library.ballslogan;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 
 import com.wang.avi.AVLoadingIndicatorView;
 
-import org.mym.library.R;
+import org.ptrheader.library.R;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrUIHandler;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;

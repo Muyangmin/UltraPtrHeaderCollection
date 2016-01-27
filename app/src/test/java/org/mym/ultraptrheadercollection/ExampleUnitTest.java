@@ -1,4 +1,4 @@
-package org.mym.ultraptrheadercollection;
+package org.ptrheader.ultraptrheadercollection;
 
 import org.junit.Test;
 

@@ -25,10 +25,10 @@
             app:colorScheme2="@color/ptr_header_green"
             app:colorScheme3="@color/ptr_header_red"
             app:colorScheme4="@color/ptr_header_blue"
-            app:customIndicator="org.mym.library.ballslogan.BallRectanglePathIndicator"
+            app:customIndicator="org.ptrheader.library.ballslogan.BallRectanglePathIndicator"
             />
 
-        <org.mym.library.ballslogan.PtrPlaceHolder
+        <org.ptrheader.library.ballslogan.PtrPlaceHolder
             android:id="@+id/header_ptr_place_holder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.mym.ultraptrheadercollection.MainActivity">
+    tools:context="org.ptrheader.ultraptrheadercollection.MainActivity">
 
     <in.srain.cube.views.ptr.PtrFrameLayout
         android:id="@+id/main_ptr"
