@@ -20,7 +20,7 @@ import in.srain.cube.views.ptr.indicator.PtrIndicator;
  */
 public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
 
-    private BallRectangleView viewRectangle;
+    private BallRectangleView ballRectangleView;
     private ImageView imgSlogan;
 
     public BallSloganHeader(Context context) {
@@ -47,7 +47,7 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
 
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.header_ball_slogan, this);
-        viewRectangle = (BallRectangleView)findViewById(R.id.ball_slogan_view_rectangle);
+        ballRectangleView = (BallRectangleView)findViewById(R.id.ball_slogan_view_rectangle);
         imgSlogan = (ImageView)findViewById(R.id.ball_slogan_img_slogan);
     }
 
@@ -74,15 +74,15 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
     @Override
     public void onUIPositionChange(PtrFrameLayout frame, boolean isUnderTouch, byte status, PtrIndicator ptrIndicator) {
         int rotateDegree = (int) (ptrIndicator.getCurrentPercent() * 360);
-        viewRectangle.setRotation(rotateDegree);
+        ballRectangleView.setRotation(rotateDegree);
     }
 
     private void showProgressView() {
-        viewRectangle.startAnimator();
+        ballRectangleView.startAnimator();
     }
 
     private void hideProgressView() {
-        viewRectangle.stopAnimator();
+        ballRectangleView.stopAnimator();
     }
 
 }
