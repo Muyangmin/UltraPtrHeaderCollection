@@ -74,6 +74,27 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
         a.recycle();
     }
 
+    /**
+     * Retrieve the view for displaying slogan.
+     */
+    public ImageView getSloganImageView() {
+        return imgSlogan;
+    }
+
+    /**
+     * Retrieve the ball view.
+     */
+    public BallRectangleView getBallRectangleView() {
+        return ballRectangleView;
+    }
+
+    /**
+     * Set whether allow rotation when the header is pulled down.The default value is {@code true}.
+     */
+    public void setRotateBallsOnPullDown(boolean rotateBallsOnPullDown) {
+        this.rotateBallsOnPullDown = rotateBallsOnPullDown;
+    }
+
     @Override
     public void onUIReset(PtrFrameLayout frame) {
         hideProgressView();
