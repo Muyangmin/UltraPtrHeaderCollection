@@ -2,6 +2,7 @@ package org.ptrheader.library.ballslogan;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -20,35 +21,57 @@ import in.srain.cube.views.ptr.indicator.PtrIndicator;
  */
 public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
 
+    private boolean rotateBallsOnPullDown;
+
     private BallRectangleView ballRectangleView;
     private ImageView imgSlogan;
 
     public BallSloganHeader(Context context) {
         super(context);
-        init(context);
+        init(context, null);
     }
 
     public BallSloganHeader(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context, attrs);
     }
 
     public BallSloganHeader(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context);
+        init(context, attrs);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @SuppressWarnings("unused")
     public BallSloganHeader(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init(context);
+        init(context, attrs);
     }
 
-    private void init(Context context) {
+    private void init(Context context, AttributeSet attrs) {
         LayoutInflater.from(context).inflate(R.layout.header_ball_slogan, this);
         ballRectangleView = (BallRectangleView)findViewById(R.id.ball_slogan_view_rectangle);
         imgSlogan = (ImageView)findViewById(R.id.ball_slogan_img_slogan);
+
+        if (attrs == null) {
+            return ;
+        }
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.BallSloganHeader);
+
+        int colorScheme1 = a.getColor(R.styleable.BallSloganHeader_colorScheme1, -1);
+        int colorScheme2 = a.getColor(R.styleable.BallSloganHeader_colorScheme2, -1);
+        int colorScheme3 = a.getColor(R.styleable.BallSloganHeader_colorScheme3, -1);
+        int colorScheme4 = a.getColor(R.styleable.BallSloganHeader_colorScheme4, -1);
+        ballRectangleView.setColorSchemes(colorScheme1, colorScheme2, colorScheme3, colorScheme4);
+
+        int sloganDrawable = a.getResourceId(R.styleable.BallSloganHeader_sloganDrawable, -1);
+        imgSlogan.setBackgroundResource(sloganDrawable);
+
+        //default behaviour allows rotate
+        rotateBallsOnPullDown = a.getBoolean(R.styleable.BallSloganHeader_rotateBallsOnPullDown,
+                true);
+
+        a.recycle();
     }
 
     @Override
@@ -73,8 +96,10 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
 
     @Override
     public void onUIPositionChange(PtrFrameLayout frame, boolean isUnderTouch, byte status, PtrIndicator ptrIndicator) {
-        int rotateDegree = (int) (ptrIndicator.getCurrentPercent() * 360);
-        ballRectangleView.setRotation(rotateDegree);
+        if (rotateBallsOnPullDown) {
+            int rotateDegree = (int) (ptrIndicator.getCurrentPercent() * 360);
+            ballRectangleView.setRotation(rotateDegree);
+        }
     }
 
     private void showProgressView() {
