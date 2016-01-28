@@ -68,7 +68,7 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
         int colorScheme4 = a.getColor(R.styleable.BallSloganHeader_colorScheme4, -1);
         ballRectangleView.setColorSchemes(colorScheme1, colorScheme2, colorScheme3, colorScheme4);
 
-        int sloganDrawable = a.getResourceId(R.styleable.BallSloganHeader_sloganDrawable, -1);
+        int sloganDrawable = a.getResourceId(R.styleable.BallSloganHeader_sloganDrawable, 0);
         imgSlogan.setBackgroundResource(sloganDrawable);
 
         //default behaviour allows rotate
