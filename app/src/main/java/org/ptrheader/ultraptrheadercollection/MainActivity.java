@@ -29,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
         BallSloganHeader header = new BallSloganHeader(this);
         ptrFrameLayout.setHeaderView(header);
         ptrFrameLayout.addPtrUIHandler(header);
+//        header  .getSloganImageView()
+//                .setBackgroundResource(R.drawable.ptr_header_slogan);
+        //OR:
+        header.setSloganBackgroundResource(R.drawable.ptr_header_slogan);
+        header  //.getBallRectangleView()   //optional
+                .setColorSchemes(
+                getResources().getColor(R.color.ptr_header_yellow),
+                getResources().getColor(R.color.ptr_header_green),
+                getResources().getColor(R.color.ptr_header_red),
+                getResources().getColor(R.color.ptr_header_blue)
+        );
+        header.setRotateBallsOnPullDown(true);
 
         //emulate data request
         ptrFrameLayout.setPtrHandler(new PtrDefaultHandler() {
