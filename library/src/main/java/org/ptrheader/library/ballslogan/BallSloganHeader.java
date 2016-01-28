@@ -5,13 +5,11 @@ import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.wang.avi.AVLoadingIndicatorView;
-
 import org.ptrheader.library.R;
+
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrUIHandler;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
