@@ -26,11 +26,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ptrFrameLayout = (PtrFrameLayout)findViewById(R.id.main_ptr);
 
-//        BallSloganHeader header = new BallSloganHeader(this);
-//        ptrFrameLayout.setHeaderView(header);
-//        ptrFrameLayout.addPtrUIHandler(header);
-
-//        ptrFrameLayout.addPtrUIHandler((PtrUIHandler)ptrFrameLayout.getHeaderView());
+        BallSloganHeader header = new BallSloganHeader(this);
+        ptrFrameLayout.setHeaderView(header);
+        ptrFrameLayout.addPtrUIHandler(header);
 
         //emulate data request
         ptrFrameLayout.setPtrHandler(new PtrDefaultHandler() {

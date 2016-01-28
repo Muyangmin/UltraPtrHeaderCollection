@@ -179,16 +179,6 @@ public class BallRectangleView extends View {
         basePoint[2].set(x1, y2);
         basePoint[3].set(x2, y2);
 
-        //TEST codes BEGIN
-        startAnimator();
-
-        postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                stopAnimator();
-            }
-        }, 9600);
-        //TEST codes END
     }
 
     public void stopAnimator() {
