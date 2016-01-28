@@ -99,6 +99,20 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
         this.rotateBallsOnPullDown = rotateBallsOnPullDown;
     }
 
+    /**
+     * Delegate method, set the ball colors.
+     */
+    public void setColorSchemes(int colorScheme1, int colorScheme2, int colorScheme3, int colorScheme4) {
+        ballRectangleView.setColorSchemes(colorScheme1, colorScheme2, colorScheme3, colorScheme4);
+    }
+
+    /**
+     * Delegate method, set the background of slogan view.
+     */
+    public void setSloganBackgroundResource(int resid) {
+        imgSlogan.setBackgroundResource(resid);
+    }
+
     @Override
     public void onUIReset(PtrFrameLayout frame) {
         hideProgressView();
