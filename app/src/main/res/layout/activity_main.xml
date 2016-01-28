@@ -4,17 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.mym.ultraptrheadercollection.MainActivity">
+    tools:context="org.ptrheader.ultraptrheadercollection.MainActivity">
 
     <in.srain.cube.views.ptr.PtrFrameLayout
         android:id="@+id/main_ptr"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Hello World!"/>
+        <org.ptrheader.library.ballslogan.BallRectangleView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            />
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Hello World!"/>-->
     </in.srain.cube.views.ptr.PtrFrameLayout>
 </RelativeLayout>

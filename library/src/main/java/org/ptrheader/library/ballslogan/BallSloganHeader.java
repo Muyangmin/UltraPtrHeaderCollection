@@ -1,16 +1,15 @@
-package org.mym.library.ballslogan;
+package org.ptrheader.library.ballslogan;
 
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
-import com.wang.avi.AVLoadingIndicatorView;
+import org.ptrheader.library.R;
 
-import org.mym.library.R;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrUIHandler;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
@@ -21,8 +20,8 @@ import in.srain.cube.views.ptr.indicator.PtrIndicator;
  */
 public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
 
-    private View viewPlaceHolder;
-    private AVLoadingIndicatorView indicatorView;
+    private BallRectangleView viewRectangle;
+    private ImageView imgSlogan;
 
     public BallSloganHeader(Context context) {
         super(context);
@@ -47,22 +46,9 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
     }
 
     private void init(Context context) {
-        View headerView = LayoutInflater.from(context).inflate(R.layout.header_ball_slogan, this);
-        //        TextView tvMotto = (TextView) headerView.findViewById(R.id.header_ptr_motto);
-        //        TextView tvAuthor = (TextView) headerView.findViewById(R.id.header_ptr_author);
-        viewPlaceHolder = headerView.findViewById(R.id.header_ptr_place_holder);
-        indicatorView = (AVLoadingIndicatorView) headerView.findViewById(R.id
-                .header_ptr_avLoadingIndicator);
-
-        //        String[] mottoArray = context.getResources().getStringArray(R.array.ptr_random_motto);
-        //        String[] authorArray = context.getResources().getStringArray(R.array.ptr_random_author);
-        //        if (mottoArray.length != authorArray.length) {
-        //            L.e(VIEW_LOG_TAG, "Different array length!");
-        //        }
-        //        int safeLength = Math.min(mottoArray.length, authorArray.length);
-        //        int index = ((int) (Math.random() * 1000)) % safeLength;
-        //        tvMotto.setText(mottoArray[index]);
-        //        tvAuthor.setText(authorArray[index]);
+        LayoutInflater.from(context).inflate(R.layout.header_ball_slogan, this);
+        viewRectangle = (BallRectangleView)findViewById(R.id.ball_slogan_view_rectangle);
+        imgSlogan = (ImageView)findViewById(R.id.ball_slogan_img_slogan);
     }
 
     @Override
@@ -88,17 +74,15 @@ public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
     @Override
     public void onUIPositionChange(PtrFrameLayout frame, boolean isUnderTouch, byte status, PtrIndicator ptrIndicator) {
         int rotateDegree = (int) (ptrIndicator.getCurrentPercent() * 360);
-        viewPlaceHolder.setRotation(rotateDegree);
+        viewRectangle.setRotation(rotateDegree);
     }
 
     private void showProgressView() {
-        viewPlaceHolder.setVisibility(View.INVISIBLE);
-        indicatorView.setVisibility(View.VISIBLE);
+        viewRectangle.startAnimator();
     }
 
     private void hideProgressView() {
-        indicatorView.setVisibility(View.INVISIBLE);
-        viewPlaceHolder.setVisibility(View.VISIBLE);
+        viewRectangle.stopAnimator();
     }
 
 }

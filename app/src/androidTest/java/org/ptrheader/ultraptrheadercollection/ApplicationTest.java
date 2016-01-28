@@ -1,4 +1,4 @@
-package org.mym.ultraptrheadercollection;
+package org.ptrheader.ultraptrheadercollection;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,12 +1,13 @@
-package org.mym.ultraptrheadercollection;
+package org.ptrheader.ultraptrheadercollection;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import org.mym.library.ballslogan.BallSloganHeader;
+import org.ptrheader.library.ballslogan.BallSloganHeader;
 
 import in.srain.cube.views.ptr.PtrDefaultHandler;
 import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.PtrUIHandler;
 
 public class MainActivity extends AppCompatActivity {
 
