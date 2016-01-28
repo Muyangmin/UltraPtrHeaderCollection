@@ -16,8 +16,12 @@ import in.srain.cube.views.ptr.PtrUIHandler;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
 
 /**
- * Custom header views.
+ * <p>
+ *     A header view contains a rotatable 4-colored-ball view and a normal ImageView for displaying
+ * slogans.
+ * </p>
  * Created by Muyangmin on 1/13/16.
+ * @see org.ptrheader.library.R.styleable#BallSloganHeader
  */
 public class BallSloganHeader extends FrameLayout implements PtrUIHandler {
 
