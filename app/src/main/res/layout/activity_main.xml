@@ -13,6 +13,7 @@
         android:layout_height="match_parent">
 
         <org.ptrheader.library.ballslogan.BallSloganHeader
+            android:id="@+id/main_header_ball_slogan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:colorScheme1="@color/ptr_header_yellow"
