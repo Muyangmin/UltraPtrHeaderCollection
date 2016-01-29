@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BallSloganHeader">
+        <!-- color for the top-left ball. -->
+        <attr name="colorScheme1" format="color" />
+        <!-- color for the top-right ball. -->
+        <attr name="colorScheme2" format="color" />
+        <!-- color for the bottom-left ball. -->
+        <attr name="colorScheme3" format="color" />
+        <!-- color for the bottom-right ball. -->
+        <attr name="colorScheme4" format="color" />
+        <!-- the background of slogan view. -->
+        <attr name="sloganDrawable" format="reference" />
+        <!-- whether allow rotation when the header is pulled down. -->
+        <attr name="rotateBallsOnPullDown" format="boolean" />
+    </declare-styleable>
+</resources>

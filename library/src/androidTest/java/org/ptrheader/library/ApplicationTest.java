@@ -1,4 +1,4 @@
-package org.mym.library;
+package org.ptrheader.library;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
