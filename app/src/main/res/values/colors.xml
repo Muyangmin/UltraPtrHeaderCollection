@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- 下拉刷新动画图标颜色值 -->
+    <color name="ptr_header_yellow">#FDC752</color>
+    <color name="ptr_header_green">#70D439</color>
+    <color name="ptr_header_red">#FD5352</color>
+    <color name="ptr_header_blue">#1699FE</color>
 </resources>

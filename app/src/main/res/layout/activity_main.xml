@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,17 +12,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <org.ptrheader.library.ballslogan.BallRectangleView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:background="@color/colorPrimary"
-            />
+        <org.ptrheader.library.ballslogan.BallSloganHeader
+            android:id="@+id/main_header_ball_slogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:colorScheme1="@color/ptr_header_yellow"
+            app:colorScheme2="@color/ptr_header_green"
+            app:colorScheme3="@color/ptr_header_red"
+            app:colorScheme4="@color/ptr_header_blue"
+            app:rotateBallsOnPullDown="true"
+            app:sloganDrawable="@drawable/ptr_header_slogan"
+            >
 
-        <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:gravity="center"-->
-        <!--android:text="Hello World!"/>-->
+        </org.ptrheader.library.ballslogan.BallSloganHeader>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Hello World!"/>
     </in.srain.cube.views.ptr.PtrFrameLayout>
 </RelativeLayout>
