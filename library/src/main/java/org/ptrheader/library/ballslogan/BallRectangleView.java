@@ -127,22 +127,25 @@ public class BallRectangleView extends View {
             ValueAnimator animatorX = null;
             ValueAnimator animatorY = null;
             final int index = i;
+            //NOTE: Here the animator must end as the start value, or it would lead to a short
+            // 'flash' on every time animator executed completed.
+            // So it is five points and four lines.
             switch (i) {
                 case 0:
-                    animatorX = ValueAnimator.ofFloat(x1, x2, x2, x1);
-                    animatorY = ValueAnimator.ofFloat(y1, y1, y2, y2);
+                    animatorX = ValueAnimator.ofFloat(x1, x2, x2, x1, x1);
+                    animatorY = ValueAnimator.ofFloat(y1, y1, y2, y2, y1);
                     break;
                 case 1:
-                    animatorX = ValueAnimator.ofFloat(x2, x2, x1, x1);
-                    animatorY = ValueAnimator.ofFloat(y1, y2, y2, y1);
+                    animatorX = ValueAnimator.ofFloat(x2, x2, x1, x1, x2);
+                    animatorY = ValueAnimator.ofFloat(y1, y2, y2, y1, y1);
                     break;
                 case 2:
-                    animatorX = ValueAnimator.ofFloat(x1, x1, x2, x2);
-                    animatorY = ValueAnimator.ofFloat(y2, y1, y1, y2);
+                    animatorX = ValueAnimator.ofFloat(x1, x1, x2, x2, x1);
+                    animatorY = ValueAnimator.ofFloat(y2, y1, y1, y2, y2);
                     break;
                 case 3:
-                    animatorX = ValueAnimator.ofFloat(x2, x1, x1, x2);
-                    animatorY = ValueAnimator.ofFloat(y2, y2, y1, y1);
+                    animatorX = ValueAnimator.ofFloat(x2, x1, x1, x2, x2);
+                    animatorY = ValueAnimator.ofFloat(y2, y2, y1, y1, y2);
                     break;
                 default:
                     break;
