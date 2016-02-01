@@ -1,5 +1,10 @@
 #UltraPtrHeaderCollection
 
+[ ![Download](https://api.bintray.com/packages/muyangmin/maven/ultra-ptr-headers/images/download.svg) ](https://bintray.com/muyangmin/maven/ultra-ptr-headers/_latestVersion)
+
+#####TODOs and Plans
+加入使用wiki；加入更多的header。欢迎关注和加入。
+
 ##Introduction
 Ultra-Ptr是一个伟大的下拉刷新库，在稳定性、通用性、可扩展性和代码的可理解性上都远比很多其他下拉刷新库（包括官方的SwipeRefreshLayout）要优秀很多。
 如果你还不知道Ultra-Ptr库，请戳这里:[liaohuqiu/android-Ultra-Pull-To-Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh)
@@ -9,14 +14,21 @@ Ultra-Ptr是一个伟大的下拉刷新库，在稳定性、通用性、可扩�
 
 ##Convention
 我们约定：  
-1. 所有的库都在library module中定义;
-2. 其他的依赖可以在library中添加，但提倡使用较少依赖的header。
+1. 所有的库都在library module中定义;  
+2. 其他的依赖可以在library中添加，但提倡使用较少依赖的header;  
+3. 提倡同时支持XML和Java代码使用。
 
-##Gradle integration
-暂不提供，敬请期待~
+##Map/Navigation
+目前已经实现的效果有：  
+* 下拉可旋转的彩色小球和一张宣传图片: **BallSloganHeader**。
 
-##How to join us?
-如果你有很棒的Header效果实现或推荐，欢迎提issue/PR，但是请在dev分支上提供PR。
+##Gradle
+```Groovy  
+compile 'org.ptrheader.library:ultra-ptr-headers:0.1.0'
+```
+
+##Contribution
+如果在使用上有问题或发现了Bug，或者你有很棒的Header效果实现或推荐，欢迎提issue/PR，但是请在dev分支上提供PR。
 
 ##Licence
 Apache Licence V2.0
