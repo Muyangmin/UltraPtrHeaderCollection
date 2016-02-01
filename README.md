@@ -1,7 +1,9 @@
 #UltraPtrHeaderCollection
 
+[ ![Download](https://api.bintray.com/packages/muyangmin/maven/ultra-ptr-headers/images/download.svg) ](https://bintray.com/muyangmin/maven/ultra-ptr-headers/_latestVersion)
+
 #####TODOs and Plans
-预备加入gradle集成；加入使用wiki；加入更多的header。欢迎关注和加入。
+加入使用wiki；加入更多的header。欢迎关注和加入。
 
 ##Introduction
 Ultra-Ptr是一个伟大的下拉刷新库，在稳定性、通用性、可扩展性和代码的可理解性上都远比很多其他下拉刷新库（包括官方的SwipeRefreshLayout）要优秀很多。
@@ -21,7 +23,9 @@ Ultra-Ptr是一个伟大的下拉刷新库，在稳定性、通用性、可扩�
 * 下拉可旋转的彩色小球和一张宣传图片: **BallSloganHeader**。
 
 ##Gradle
-敬请期待~
+```Groovy  
+compile 'org.ptrheader.library:ultra-ptr-headers:0.1.0'
+```
 
 ##Contribution
 如果在使用上有问题或发现了Bug，或者你有很棒的Header效果实现或推荐，欢迎提issue/PR，但是请在dev分支上提供PR。
