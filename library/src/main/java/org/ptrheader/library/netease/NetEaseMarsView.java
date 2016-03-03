@@ -4,6 +4,7 @@ import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -49,6 +50,9 @@ public class NetEaseMarsView extends FrameLayout implements PtrUIHandler {
     private float circleScaleX = 0;
     private float circleTranslateY = 0;
 
+    //-----   Customize properties   -----
+    private int circleAnimDuration;
+
     private AnimatorSet circleAnimators;
 
     public NetEaseMarsView(Context context) {
@@ -79,6 +83,17 @@ public class NetEaseMarsView extends FrameLayout implements PtrUIHandler {
         imgMars = (ImageView) findViewById(R.id.netease_mars_img_mars);
         imgMarsCircle = (ImageView) findViewById(R.id.netease_mars_img_mars_circle);
 
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NetEaseMarsView);
+        int marsDrawableRes = a.getResourceId(R.styleable.NetEaseMarsView_marsDrawable, R
+                .drawable.netease_refresh_mars);
+        int circleDrawableRes = a.getResourceId(R.styleable.NetEaseMarsView_marsCircleDrawable,
+                R.drawable.netease_refresh_mars_circle);
+        imgMars.setImageResource(marsDrawableRes);
+        imgMarsCircle.setImageResource(circleDrawableRes);
+
+        circleAnimDuration = a.getInt(R.styleable.NetEaseMarsView_animationDuration, 1000);
+        a.recycle();
+
         circleAnimators = new AnimatorSet();
         ValueAnimator scaleXAnimator = ValueAnimator.ofFloat(1, 0.5F, 1, 0.5F, 1);
         setAnimators(scaleXAnimator);
@@ -104,7 +119,7 @@ public class NetEaseMarsView extends FrameLayout implements PtrUIHandler {
     }
 
     private void setAnimators(ValueAnimator animator) {
-        animator.setDuration(1000);
+        animator.setDuration(circleAnimDuration);
         animator.setInterpolator(new LinearInterpolator());
         animator.setRepeatCount(ValueAnimator.INFINITE);
     }
