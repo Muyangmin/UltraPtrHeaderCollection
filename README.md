@@ -1,6 +1,7 @@
 #UltraPtrHeaderCollection
 
 [ ![Download](https://api.bintray.com/packages/muyangmin/maven/ultra-ptr-headers/images/download.svg) ](https://bintray.com/muyangmin/maven/ultra-ptr-headers/_latestVersion)
+<a href="http://www.methodscount.com/?lib=org.ptrheader.library%3Aultra-ptr-headers%3A0.2.0"><img src="https://img.shields.io/badge/Methods and size-136 | 19 KB-e91e63.svg"></img></a>
 
 #####TODOs and Plans
 加入使用wiki；加入更多的header。欢迎关注和加入。
