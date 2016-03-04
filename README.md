@@ -20,7 +20,12 @@ Ultra-Ptr是一个伟大的下拉刷新库，在稳定性、通用性、可扩�
 
 ##Map/Navigation
 目前已经实现的效果有：  
-* 下拉可旋转的彩色小球和一张宣传图片: **BallSloganHeader**。
+* 下拉可旋转的彩色小球和一张宣传图片: **BallSloganHeader**。  
+* 仿网易新闻加载动画的小球效果: **NetEaseMarsView**  
+* 仿网易新闻加载头部【与上条类似，但多出一个最近更新时间说明】: **NetEaseNewsHeader**  
+
+具体效果可以参照下图（Gif图片有压缩和失真，真机上可以看到更好的效果）：  
+![](https://github.com/Muyangmin/UltraPtrHeaderCollection/blob/master/Demo.gif)
 
 ##Gradle
 ```Groovy  
