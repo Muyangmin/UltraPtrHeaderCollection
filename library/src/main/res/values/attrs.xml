@@ -14,4 +14,13 @@
         <!-- whether allow rotation when the header is pulled down. -->
         <attr name="rotateBallsOnPullDown" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="NetEaseMarsView">
+        <!-- Drawable for Mars.-->
+        <attr name="marsDrawable" format="reference"/>
+        <!-- Drawable for the circle.-->
+        <attr name="marsCircleDrawable" format="reference"/>
+        <!-- circle animation duration.-->
+        <attr name="animationDuration" format="integer"/>
+    </declare-styleable>
 </resources>
