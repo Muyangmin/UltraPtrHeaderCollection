@@ -14,5 +14,6 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:textColor="#212121"
+        android:textSize="@dimen/text_size_md_body"
         tools:text="BallSloganHeader"/>
 </LinearLayout>

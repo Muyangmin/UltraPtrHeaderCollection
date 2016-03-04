@@ -5,5 +5,7 @@
 
     <dimen name="toolbar_height">48dp</dimen>
 
+    <dimen name="text_size_md_body">15sp</dimen>
+    <dimen name="text_size_md_subheading">17sp</dimen>
     <dimen name="text_size_md_title">21sp</dimen>
 </resources>

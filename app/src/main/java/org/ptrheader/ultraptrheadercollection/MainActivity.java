@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements SupportedHeaderTy
                 R.layout.sample_netease_mars_only));
         list.add(new HeaderDisplay("NetEaseNewsHeader", NET_EASE_NEWS_HEADER,
                 R.layout.sample_netease_news));
+        list.add(new HeaderDisplay("To be continue...", 0, -1));
+//        list.add(new HeaderDisplay("To be continue...", 0, -1));
+//        list.add(new HeaderDisplay("To be continue...", 0, -1));
         return list;
     }
 
@@ -83,7 +86,9 @@ public class MainActivity extends AppCompatActivity implements SupportedHeaderTy
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(InnerActivity.createIntent(MainActivity.this, data));
+                    if (data.sampleUsage != -1){
+                        startActivity(InnerActivity.createIntent(MainActivity.this, data));
+                    }
                 }
             });
         }
