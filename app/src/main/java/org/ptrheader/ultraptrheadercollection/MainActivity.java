@@ -131,8 +131,13 @@ public class MainActivity extends AppCompatActivity implements SupportedHeaderTy
                         Log.wtf(LOG_TAG, "Is there any wrong config?");
                         return ;
                     }
-                    ptrFrameLayout.setHeaderView(header);
-                    ptrFrameLayout.addPtrUIHandler((PtrUIHandler) header);
+                    if (header == ptrFrameLayout.getHeaderView()){
+                        Log.v(LOG_TAG, "Already this header");
+                    }
+                    else{
+                        ptrFrameLayout.setHeaderView(header);
+                        ptrFrameLayout.addPtrUIHandler((PtrUIHandler) header);
+                    }
                     //auto refresh to show header immediately.
                     ptrFrameLayout.autoRefresh();
                 }
