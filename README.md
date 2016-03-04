@@ -30,7 +30,7 @@ Ultra-Ptr是一个伟大的下拉刷新库，在稳定性、通用性、可扩�
 
 ##Gradle
 ```Groovy  
-compile 'org.ptrheader.library:ultra-ptr-headers:0.1.0'
+compile 'org.ptrheader.library:ultra-ptr-headers:0.2.0'
 ```
 
 ##Contribution
