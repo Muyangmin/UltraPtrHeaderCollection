@@ -23,4 +23,15 @@
         <!-- circle animation duration.-->
         <attr name="animationDuration" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="IngkeeHeader">
+        <!-- Logo drawable, displayed on center while refreshing.-->
+        <attr name="logoDrawableColored" format="reference"/>
+        <!-- Like colored drawable, but displayed by default. -->
+        <attr name="logoDrawableGrey" format="reference"/>
+
+        <!-- Drawable indicator, on Ingkee app, it's a rotated animation.-->
+        <attr name="customProgressIndicator" format="reference" />
+    </declare-styleable>
+
 </resources>

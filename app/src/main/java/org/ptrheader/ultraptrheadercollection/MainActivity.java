@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements SupportedHeaderTy
         ptrFrameLayout = (PtrFrameLayout) findViewById(R.id.main_ptr);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_recycler_view);
+        //noinspection ConstantConditions
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         List<HeaderDisplay> displayList = createHeaderDisplayList();
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements SupportedHeaderTy
                 R.layout.sample_netease_mars_only));
         list.add(new HeaderDisplay("NetEaseNewsHeader", NET_EASE_NEWS_HEADER,
                 R.layout.sample_netease_news));
+        list.add(new HeaderDisplay("Ingkee Header", INGKEE_HEADER,
+                R.layout.sample_ingkee_header));
         list.add(new HeaderDisplay("To be continue...", 0, -1));
 //        list.add(new HeaderDisplay("To be continue...", 0, -1));
 //        list.add(new HeaderDisplay("To be continue...", 0, -1));
