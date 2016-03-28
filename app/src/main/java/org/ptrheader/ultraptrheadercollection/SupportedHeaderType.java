@@ -20,4 +20,9 @@ public interface SupportedHeaderType {
      * @see org.ptrheader.library.netease.NetEaseNewsHeader
      */
     int NET_EASE_NEWS_HEADER = 3;
+
+    /**
+     * @see org.ptrheader.library.ingkee.IngkeeHeader
+     */
+    int INGKEE_HEADER = 4;
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/ptr_header_ingkee_prg_indicator"
+        style="@android:style/Widget.ProgressBar.Large.Inverse"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDuration="700"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/ptr_header_ingkee_img_logo"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"/>
+</RelativeLayout>

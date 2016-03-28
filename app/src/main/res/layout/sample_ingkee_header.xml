@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.ptrheader.library.ingkee.IngkeeHeader xmlns:android="http://schemas.android.com/apk/res/android"
+                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent"
+                                           app:customProgressIndicator="@drawable/ingkee_prg_indeterminate_indicator"
+                                           app:logoDrawableColored="@drawable/ingkee_refresh_logo_color"
+                                           app:logoDrawableGrey="@drawable/ingkee_refresh_logo_grey">
+</org.ptrheader.library.ingkee.IngkeeHeader>
